@@ -9,6 +9,7 @@ namespace MediaPress\Starter_Theme;
 
 $primary_nav_id = get_nav_id();
 $mobile_nav_id  = get_nav_id( 'Mobile' ) ?? $primary_nav_id;
+
 ?>
 
 <!-- wp:group {"align":"wide","backgroundColor":"base","layout":{"type":"default"}} -->

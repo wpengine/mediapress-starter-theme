@@ -12,7 +12,7 @@ namespace MediaPress\Starter_Theme;
  *
  * @param string $menu_title The title of the menu. Default is 'Primary'.
  *
- * @return int|null The menu ID if found, null otherwise.
+ * @return int The menu ID if found, -1 otherwise.
  */
 function get_nav_id( $menu_title = 'Primary' ) {
 	$menu = get_posts(
@@ -31,5 +31,5 @@ function get_nav_id( $menu_title = 'Primary' ) {
 		]
 	);
 
-	return ! empty( $menu ) ? $menu[0] : null;
+	return ! empty( $menu ) ? $menu[0] : -1;
 }
