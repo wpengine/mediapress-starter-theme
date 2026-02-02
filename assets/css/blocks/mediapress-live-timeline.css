@@ -15,7 +15,7 @@
   .live-timeline-list__item:not(:last-of-type)
   .live-timeline-item {
   display: block;
-  color: '';
+  color: "";
   border-block-end: 1px solid var(--mediapress-live-timeline-track);
   padding-block-end: 20px;
 }

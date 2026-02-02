@@ -10,28 +10,51 @@ namespace MediaPress\Starter_Theme;
 class Init {
 
 	/**
-	 * Init constructor.
+	 * Add hooks for enqueuing styles in both front-end and editor.
 	 */
 	public function __construct() {
-		add_action( 'wp_enqueue_scripts', [ $this,'enqueue_styles' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this,'enqueue_styles' ] );
+		add_action( 'init', [ $this,'enqueue_block_styles' ] );
 	}
 
 	/**
-	 * Enqueue theme styles.
+	 * Enqueue theme and block styles.
 	 *
 	 * @return void
 	 */
-	public function enqueue_styles() {
-		$shared_asset_file = include get_parent_theme_file_path( '/build/shared.asset.php' );
+	public function enqueue_block_styles() {
 
-		wp_enqueue_style(
-			'mediapress-starter-theme',
-			get_parent_theme_file_uri( '/build/shared.css' ),
-			[],
-			$shared_asset_file['version'],
+
+		wp_enqueue_block_style(
+			'core/post-author',
+			[
+				'handle' => 'mediapress-starter-theme-core-post-author',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/core-post-author.css' ),
+			]
 		);
 
-		add_editor_style( get_parent_theme_file_uri( '/build/shared.css' ) );
+		wp_enqueue_block_style(
+			'mediapress-live/feed',
+			[
+				'handle' => 'mediapress-starter-theme-live-feed',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-live-feed.css' ),
+			]
+		);
+
+		wp_enqueue_block_style(
+			'mediapress-live/timeline',
+			[
+				'handle' => 'mediapress-starter-theme-live-timeline',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-live-timeline.css' ),
+			]
+		);
+
+		wp_enqueue_block_style(
+			'mediapress/listicle-range-pagination',
+			[
+				'handle' => 'mediapress-starter-theme-listicle-range-pagination',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-listicle-range-pagination.css' ),
+			]
+		);
+
 	}
 }

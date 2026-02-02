@@ -1,6 +1,7 @@
 .wp-block-post-author__avatar {
   margin-inline-end: 0.75rem;
 }
+
 .wp-block-post-author__avatar img {
   inline-size: 45px;
   block-size: 45px;
@@ -22,8 +23,4 @@
 .wp-block-post-author__name {
   font-weight: 700;
   font-size: var(--wp--preset--font-size--small);
-}
-
-.wp-block-mediapress-live-feed .live-feed-item {
-  border-radius: 4px;
 }

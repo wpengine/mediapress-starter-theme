@@ -1,0 +1,13 @@
+.wp-block-mediapress-listicle-range-pagination
+  .listicle-range-pagination__button {
+  border-color: #e7e7e7;
+}
+
+.wp-block-mediapress-listicle-range-pagination
+  .listicle-range-pagination__button:hover,
+.wp-block-mediapress-listicle-range-pagination
+  .listicle-range-pagination__button:focus,
+.wp-block-mediapress-listicle-range-pagination
+  .listicle-range-pagination__button[aria-current="true"] {
+  background: var(--wp--preset--color--accent);
+}
