@@ -1,0 +1,23 @@
+{
+  "name": "@mediapress/starter-theme",
+  "description": "The Starter Theme for MediaPress",
+  "version": "1.0.0",
+  "author": "WP Engine",
+  "homepage": "https://wpengine.com",
+  "keywords": [],
+  "private": true,
+  "prettier": "@bigbite/build-tools/configs/prettier",
+  "eslintConfig": {
+    "extends": "./node_modules/@bigbite/build-tools/configs/eslint"
+  },
+  "scripts": {
+    "watch:dev": "build-tools build",
+    "build:prod": "build-tools build --once --production",
+    "lint:js:fix": "eslint ./src --fix",
+    "lint:js": "eslint ./src",
+    "lint:php": "composer phpcs && composer phpstan"
+  },
+  "devDependencies": {
+    "@bigbite/build-tools": "^2.0.0"
+  }
+}

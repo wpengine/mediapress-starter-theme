@@ -1,0 +1,21 @@
+.wp-block-mediapress-live-timeline {
+  --mediapress-live-timeline-track: rgba(255, 255, 255, 0.15);
+  --mediapress-live-timeline-dot: rgba(255, 255, 255, 0.8);
+  color: var(--mediapress-live-timeline-dot);
+  background-color: var(--wp--preset--color--accent);
+  border-radius: 5px;
+  padding: 10px 10px;
+}
+
+.wp-block-mediapress-live-timeline a {
+  color: var(--wp--preset--color--base);
+}
+
+.wp-block-mediapress-live-timeline
+  .live-timeline-list__item:not(:last-of-type)
+  .live-timeline-item {
+  display: block;
+  color: '';
+  border-block-end: 1px solid var(--mediapress-live-timeline-track);
+  padding-block-end: 20px;
+}
