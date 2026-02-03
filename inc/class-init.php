@@ -34,7 +34,7 @@ class Init {
 		);
 
 		wp_enqueue_block_style(
-			'mediapress-live/feed',
+			'mediapress/live-feed',
 			[
 				'handle' => 'mediapress-starter-theme-live-feed',
 				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-live-feed.css' ),
@@ -42,7 +42,7 @@ class Init {
 		);
 
 		wp_enqueue_block_style(
-			'mediapress-live/timeline',
+			'mediapress/live-timeline',
 			[
 				'handle' => 'mediapress-starter-theme-live-timeline',
 				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-live-timeline.css' ),

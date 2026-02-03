@@ -54,7 +54,7 @@ $mobile_nav_id  = get_nav_id( 'Mobile' ) ?? $primary_nav_id;
 				</div>
 				<!-- /wp:group -->
 
-				<!-- wp:mediapress-live/flag /-->
+				<!-- wp:mediapress/live-flag /-->
 
 				<!-- wp:post-title {"level":1,"style":{"elements":{"link":{"color":{"text":"var:preset|color|base"}}}},"textColor":"base","fontSize":"x-large"} /-->
 
