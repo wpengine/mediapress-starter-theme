@@ -57,5 +57,13 @@ class Init {
 			]
 		);
 
+		wp_enqueue_block_style(
+			'core/columns',
+			[
+				'handle' => 'mediapress-starter-theme-recommendations-columns',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/recommendations-columns.css' ),
+			]
+		);
+
 	}
 }
