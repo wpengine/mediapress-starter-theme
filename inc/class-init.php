@@ -13,8 +13,8 @@ class Init {
 	 * Add hooks for enqueuing styles in both front-end and editor.
 	 */
 	public function __construct() {
-		add_action( 'init', [ $this,'enqueue_block_styles' ] );
-		add_filter('wpe_smartsearch/search/facet_blocks_enabled', '__return_false' );
+		add_action( 'init', [ $this, 'enqueue_block_styles' ] );
+		add_filter( 'wpe_smartsearch/search/facet_blocks_enabled', '__return_false' );
 	}
 
 	/**
