@@ -1,51 +1,24 @@
-/* Vertical separators for recommendations layout */
+/* Vertical separators between recommendation post items */
 
-/* 3-column layout - separators between post items */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-3 > li,
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-3 > li {
+/* Add padding and position to all items */
+.wp-block-post-template.is-layout-grid > li {
   position: relative;
-  padding-inline-end: 2rem;
+  padding-inline-end: 2rem !important;
 }
 
-/* Add separator line after each post item except every 3rd */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-3 > li:not(:nth-child(3n))::after,
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-3 > li:not(:nth-child(3n))::after {
+/* Add divider to all items except the last one */
+.wp-block-post-template.is-layout-grid > li:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 0;
   right: 0;
-  height: 100%;
+  bottom: 0;
   width: 1px;
-  background-color: var(--wp--preset--color--base-2, #e0e0e0);
+  background-color: var(--wp--preset--color--base-2, #F7F8FE);
+  z-index: 1;
 }
 
-/* Remove padding from last item in each row */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-3 > li:nth-child(3n),
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-3 > li:nth-child(3n) {
-  padding-inline-end: 0;
-}
-
-/* 2-column layout - separator between post items */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-2 > li,
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-2 > li {
-  position: relative;
-  padding-inline-end: 2rem;
-}
-
-/* Add separator line after first post item only */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-2 > li:not(:nth-child(2n))::after,
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-2 > li:not(:nth-child(2n))::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 1px;
-  background-color: var(--wp--preset--color--base-2, #e0e0e0);
-}
-
-/* Remove padding from last item in each row */
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] .wp-block-post-template.columns-2 > li:nth-child(2n),
-.wp-block-query[data-namespace="wpengine-smart-search/recommendations"] ul.wp-block-post-template.columns-2 > li:nth-child(2n) {
-  padding-inline-end: 0;
+/* Remove padding from the last item */
+.wp-block-post-template.is-layout-grid > li:last-child {
+  padding-inline-end: 0 !important;
 }
