@@ -8,8 +8,8 @@
 
 <!-- wp:group {"layout":{"type":"default"}} -->
 <div class="wp-block-group"><!-- wp:query {"queryId":45,"query":{"postType":"post","offset":0,"exclude":[],"inherit":false,"perPage":2,"sticky":"exclude"},"namespace":"wpengine-smart-search/recommendations","layout":{"type":"default"},"postLimit":2,"recommendationsType":"related"} -->
-    <div class="wp-block-query"><!-- wp:heading {"textAlign":"left","level":4} -->
-        <h4 class="wp-block-heading has-text-align-left">More from Newsroom</h4>
+    <div class="wp-block-query"><!-- wp:heading {"textAlign":"left","level":3,"style":{"typography":{"fontSize":"26px"}}} -->
+        <h3 class="wp-block-heading has-text-align-left" style="font-size:26px">More from Newsroom</h3>
         <!-- /wp:heading -->
 
         <!-- wp:separator {"style":{"spacing":{"margin":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}},"className":"is-style-default","backgroundColor":"base-2"} -->
