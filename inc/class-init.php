@@ -13,8 +13,8 @@ class Init {
 	 * Add hooks for enqueuing styles in both front-end and editor.
 	 */
 	public function __construct() {
-		add_action( 'init', [ $this,'enqueue_block_styles' ] );
-		add_filter('wpe_smartsearch/search/facet_blocks_enabled', '__return_false' );
+		add_action( 'init', [ $this, 'enqueue_block_styles' ] );
+		add_filter( 'wpe_smartsearch/search/facet_blocks_enabled', '__return_false' );
 	}
 
 	/**
@@ -54,6 +54,14 @@ class Init {
 			[
 				'handle' => 'mediapress-starter-theme-listicle-range-pagination',
 				'src'    => get_theme_file_uri( '/assets/css/blocks/mediapress-listicle-range-pagination.css' ),
+			]
+		);
+
+		wp_enqueue_block_style(
+			'core/query',
+			[
+				'handle' => 'mediapress-starter-theme-recommendations-columns',
+				'src'    => get_theme_file_uri( '/assets/css/blocks/recommendations-columns.css' ),
 			]
 		);
 

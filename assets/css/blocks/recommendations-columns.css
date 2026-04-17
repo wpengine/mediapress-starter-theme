@@ -1,0 +1,24 @@
+/* Vertical separators between recommendation post items */
+
+/* Add padding and position to all items */
+.wp-block-post-template.is-layout-grid > li {
+  position: relative;
+  padding-inline-end: 2rem !important;
+}
+
+/* Add divider to all items except the last one */
+.wp-block-post-template.is-layout-grid > li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--wp--preset--color--base-2, #F7F8FE);
+  z-index: 1;
+}
+
+/* Remove padding from the last item */
+.wp-block-post-template.is-layout-grid > li:last-child {
+  padding-inline-end: 0 !important;
+}
