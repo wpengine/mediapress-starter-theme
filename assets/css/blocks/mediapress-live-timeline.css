@@ -7,10 +7,6 @@
   padding: 10px 10px;
 }
 
-.wp-block-mediapress-live-timeline a {
-  color: var(--wp--preset--color--base);
-}
-
 .wp-block-mediapress-live-timeline
   .live-timeline-list__item:not(:last-of-type)
   .live-timeline-item {
