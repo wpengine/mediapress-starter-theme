@@ -447,6 +447,18 @@
             }
           }
         }
+      },
+      "mediapress/live-timeline": {
+        "color": {
+          "text": "var(--wp--preset--color--base)"
+        },
+        "elements": {
+          "link": {
+            "color": {
+              "text":"var(--wp--preset--color--base)"
+            }
+          }
+        }
       }
     },
     "color": {
